@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 async def headlines():
     try:
         response = await NewsFeed().get_top_headlines()
-        # await http_session.close_session()
-        return response
     except Exception as e:
         logging.error(e)
+    else:
+        return response

@@ -12,10 +12,4 @@ class HTTPSession:
 
     @property
     def session(self):
-        # if self._session.closed:
-        #     self._session = ClientSession(base_url=BASE_URL)
         return self._session
-
-
-# HTTPSession singleton instance so that it's reused across the entire app
-http_session = HTTPSession()
